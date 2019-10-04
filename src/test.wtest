@@ -1,6 +1,15 @@
+import rodados.*
+import dependencias.*
+describe "flotaderodados" {
+	const cachito = new corsa(color = rojo)
+	const pedidos = new Pedidos{
+	distancia = 960,
+ 	tiempoMax = 8,
+ 	cantpasajeros = 4,   
+	coloresImcompatibles = #(azul,negro)
+	}
 
-test "testX" {
-
-	assert.that(true)
-
+	test "velocidad requerida"{
+	assert.equals(120, pedido.velocidadRequerida())
+	}
 }

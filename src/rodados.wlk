@@ -1,19 +1,11 @@
- //Segunda parte// 
- class Pedidos{
- 	var property rodado
- 	var property distancia
- 	var property tiempoMax
-	var property cantpasajeros
-	var property colores=[]
- 
-  method puedeSatisfacer(){
-  	return rodado 
-  }
- }
- 
- 
+import dependencias.*
+
  // Primera parte //
- class Corsa{
+ object blanco{}
+ object rojo{}
+ object azul{}
+ 
+class Corsa {
  	var property color
  	method velocidad() = 1500
  	method peso()=1300
@@ -52,7 +44,7 @@ object traffic{
 	method capacidad()= interior.capacidad()
 	method velocidad()= motor.velocidad()
 	method peso()= 4000+ interior.peso() + motor.peso()
-	method color()= "Blanco"
+	method color()= "blanco"
 }
 
 
@@ -62,30 +54,5 @@ class Especial{
 	var property peso
 	var property color
 // var al = new Especial(color="blanco",peso="",capacidad="",velocidad="")//
-}
-
-class Dependencia{
-	var flota =[] 
-	var property empleados
-method AgregarAFlota(rodado){
-	flota.add(rodado)}
-method quitarDeFlota(rodado){
-	flota.remove(rodado)
-	}
-method pesoTotalFlota(){
-	flota.sum({c=>c.peso()})
-}
-method estaBienEquipada(){
-	flota.all ({c=>c > 3 and c.velocidad() > 100 }) 
-}
-method capacidadTotalEnColor(unColor){
-	return self.rodadoEnColor(unColor)
-			self.sum(c=>c.capacidad())
-}
-method colorDelRodadoMasRapido(){ flota.max({c=>c.esVelocidadMax()}).color()
-	
-}
-method capacidadFaltante(){ flota.max() }
-method esGrande()= empleados > 401 && flota.
 }
 
